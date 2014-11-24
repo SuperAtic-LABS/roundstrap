@@ -3,10 +3,6 @@
 body
 {
   font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
-  margin: 8px;
-  background-color: #F6F6F6;
-  color: #000;
-  font-size: 12px;
 }
 
 body.iframe
@@ -20,46 +16,9 @@ body.extwin
   margin: 10px;
 }
 
-select, input, textarea
-{
-  font-size: 12px;
-  font-family: inherit;
-}
-
-th
-{
-  font-weight: normal;
-}
-
 h3
 {
   font-size: 18px;
-}
-
-a, a:active, a:visited
-{
-  color: #000;
-  outline: none;
-}
-
-a.button, a.button:visited, a.tab, a.tab:visited, a.axislist
-{
-  color: #000;
-  text-decoration: none;
-}
-
-a.tab
-{
-  width: 80px;
-  display: block;
-  text-align: center;
-}
-
-a.disabled
-{
-  color: #999;
-  text-decoration: none;
-  cursor: default;
 }
 
 hr
@@ -67,59 +26,6 @@ hr
   height: 1px;
   background-color: #666;
   border-style: none;
-}
-
-input[type="text"],
-input[type="button"],
-input[type="password"],
-textarea
-{
-  border: 1px solid #666;
-  color: #333;
-  background-color: #FFF;
-}
-
-input, textarea
-{
-  color: black;
-  padding: 1px 3px;
-}
-
-input.placeholder,
-textarea.placeholder,
-input:-moz-placeholder,
-textarea:-moz-placeholder
-{
-  color: #aaa;
-}
-
-input.button
-{
-  height: 20px;
-  color: #333333;
-  font-size: 12px;
-  padding-left: 8px;
-  padding-right: 8px;
-  background: url(images/buttons/bg.gif?v=30b2.196) repeat-x #f0f0f0;
-  border: 1px solid #a4a4a4;
-}
-
-input.button:hover
-{
-  color: black;
-}
-
-input.button[disabled],
-input.button[disabled]:hover
-{
-  color: #aaa;
-  border-color: #ccc;
-}
-
-input.mainaction
-{
-  font-weight: bold;
-  border: 1px solid #999;
 }
 
 img
@@ -152,12 +58,7 @@ img
   color: #999999;
 }
 
-/* fixes vertical alignment of checkboxes and labels */
-label input,
-label span
-{
-  vertical-align: middle;
-}
+
 
 
 /** common user interface objects */
@@ -166,9 +67,9 @@ label span
 {
   position: absolute;
   top: 85px;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .extwin #mainscreen
@@ -182,20 +83,12 @@ body > #logo
   cursor: pointer;
 }
 
-#taskbar
-{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 24px;
-  left: 250px;
-  background: url(images/taskbar.png?v=3878.1902) top right no-repeat;
-  padding: 10px 6px 5px 0px;
-  text-align: right;
-  white-space: nowrap;
-  z-index: 2;
+.navbar-brand {
+  padding: 0 10px;
 }
-
+#taskbar {
+  padding: 2px 0;
+}
 #taskbar a
 {
   font-size: 11px;
@@ -203,6 +96,7 @@ body > #logo
   text-decoration: none;
   padding: 6px 12px 6px 26px;
   background: url(images/taskicons.gif?v=b8e0.1519) no-repeat;
+  line-height: 14px;
 }
 
 #taskbar a:hover
@@ -227,6 +121,7 @@ body > #logo
 
 #taskbar a.button-logout
 {
+  padding-right: 0;
   background-position: 0 -75px;
 }
 
@@ -306,7 +201,6 @@ body.extwin #closelink
 
 .boxtitle
 {
-  height: 12px !important;
   padding: 2px 10px 5px 5px;
   border-bottom: 1px solid #999;
   color: #333;
@@ -316,7 +210,6 @@ body.extwin #closelink
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   white-space: nowrap;
-  background: url(images/listheader.gif?v=ab42.314) top left repeat-x #CCC;
 }
 
 .boxtitle .rightalign
@@ -377,7 +270,7 @@ body.iframe .boxtitle
   overflow: hidden;
   height: 22px;
   border-top: 1px solid #999;
-  background: url(images/listheader.gif?v=ab42.314) top left repeat-x #CCC;
+  background: #F9F9F9;
 }
 
 .boxfooter a.button,
@@ -546,7 +439,6 @@ body.iframe .boxtitle
 .popupmenu li a.active:visited
 {
   color: #333;
-  cursor: pointer;
 }
 
 .popupmenu li a.active:hover,
@@ -833,28 +725,23 @@ a.rcmContactAddress:hover
 
 #login-form
 {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  width: 400px;
-  border: 1px solid #999;
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+#login-form table {
+  margin: 1em 0;
+  width: 100%;
+}
+
+#login-form table td {
+  padding-right: 1em;
 }
 
 #login-form table td.title
 {
   text-align: right;
   white-space: nowrap;
-}
-
-#login-form table
-{
-  width: 1%;
-  margin: auto;
-}
-
-#login-form table td.input input
-{
-  width: 200px;
 }
 
 #login-bottomline
@@ -1127,3 +1014,4 @@ fieldset.tabbed
 .quota_text_high { color: white; }
 .quota_text_mid { color: #666; }
 .quota_text_low { color: #666; }
+

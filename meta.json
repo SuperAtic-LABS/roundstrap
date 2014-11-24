@@ -1,6 +1,7 @@
 {
-	"name": "Classic",
-	"author": "The Roundcube Dev Team",
+	"name": "Mail-in-a-Box",
+	"author": "Mail-in-a-Box (https://mailinabox.email)",
 	"license": "Creative Commons Attribution-ShareAlike",
-	"license-url": "http://creativecommons.org/licenses/by-sa/3.0/"
+	"license-url": "http://creativecommons.org/licenses/by-sa/3.0/",
+	"extends": "classic"
 }

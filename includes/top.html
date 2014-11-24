@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>         <html class="no-js lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="Robots" content="noindex,nofollow" />
+
+      <title><roundcube:object name="pagetitle" /></title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+      <link rel="index" href="$__comm_path" />
+      <link rel="shortcut icon" href="/images/favicon.ico"/>
+      <link rel="stylesheet" type="text/css" href="/common.css" />
+      <roundcube:if condition="in_array(env:task, array('mail', 'addressbook', 'settings'))" />
+        <link rel="stylesheet" type="text/css" href="/<roundcube:var name="env:task" />.css" />
+      <roundcube:endif />
+      <roundcube:if condition="browser:safari" />
+        <link rel="stylesheet" type="text/css" href="/safari.css" />
+      <roundcube:endif />
